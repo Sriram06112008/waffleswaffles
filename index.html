@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Namaste to my website!!! </title>
+        <style>
+            body{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align:center;
+                margin-top: 100px;
+            }
+
+            h1{
+                font-size: 50px;
+            }
+
+            input{
+                padding: 15px;
+                font-size: 20px;
+                margin-top: 25px;
+            }
+
+            button{
+                padding: 10px 20px;
+                font-size: 16px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="greetings"> How are feeling today, ______? </h1>
+
+        <div>
+            <input type="text" id="nameInput" placeholder="Enter Your Name"> 
+            <button onclick="updateName()">Click To Submit</button>
+        </div>
+
+        <div class="diffcalc">
+            <h2> Lets talk about differential calculus!!!</h2>
+            <p> Differential Calculus is all about studying rates of change in quantities and slope of functions.
+                Some vocabulary include derivative, limit, continuity, differentiability, and tangent line.
+            </p>
+            <img src="differential-calculus-700x430.png">
+            <a href="page2.html">
+                <button>
+                    Click to see integral calculus!!
+                </button>
+            </a>
+        </div>
+
+        <script>
+            function updateName() {
+                const name = document.getElementById("nameInput").value.trim();
+
+                if( name !== ""){
+                    document.getElementById("greetings").textContent = "How are you feeling today, " + name + "?";
+                }else{
+                     document.getElementById("greetings").textContent = "How are you feeling today, ______?";
+                }
+            }
+        </script>
+    </body>
+</html>
