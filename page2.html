@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title> Namaste to my website </title>
         <style>
-            bosy{
+            body{
                 font-family:Verdana, Geneva, Tahoma, sans-serif;
                 text-align: center;
                 margin-top: 100px;
@@ -29,7 +29,7 @@
         </style>
     </head>
     <body>
-        <h1 id="greetimgs"> How are you feeling today, _____?</h1>
+        <h1 id="greetings"> How are you feeling today, _____?</h1>
 
         <div>
             <input type="text" id="nameInput" placeholder="Enter Your Name">
@@ -42,7 +42,7 @@
                 Some Vocab words include antiderivative, definite and indefinite integrals, FTC. 
             </p>
             <img src="Integral-Calculus.png">
-            <a href="imdex.html">
+            <a href="index.html">
                 <button>
                     Click to see differential calculus!
                 </button>
@@ -51,12 +51,12 @@
 
         <script>
             function updateName() {
-                const name = document.getElementById("nameInput").value.trin();
+                const name = document.getElementById("nameInput").value.trim();
 
                 if (name !== ""){
                     document.getElementById("greetings").textContent = "How are you feeling today, " + name + "?";
                 }else{
-                    document.getElementById("greetings").textContent = "How are you feeling today. ______?"
+                    document.getElementById("greetings").textContent = "How are you feeling today. ______?";
                 }
 
             }
